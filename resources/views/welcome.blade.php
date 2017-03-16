@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Events
+                    Events <b>v0.1</b>
                 </div> 
             </div>
         </div>
