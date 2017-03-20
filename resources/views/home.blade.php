@@ -14,7 +14,10 @@
                 </div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    @foreach($data as $k=>$item)
+                        <h1>{{ ($k+1).' - '.$item->title }}</h1>
+                    @endforeach
+                    {{ $data->links() }}
                 </div>
             </div>
         </div>

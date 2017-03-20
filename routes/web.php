@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () { 
     return view('welcome');
 });
 
@@ -20,3 +20,9 @@ Auth::routes();
 Route::get('/home','HomeController@index')->name('home');
 
 Route::resource('/events','EventsController');
+
+Route::group(['middleware' => 'test'], function () {
+    Route::get('/test', function ()    {
+        return "welcome in test page";
+    }); 
+});

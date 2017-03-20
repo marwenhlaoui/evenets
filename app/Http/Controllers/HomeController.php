@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Model\Event;
 
 class HomeController extends Controller
 {
@@ -19,8 +20,9 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('home');
+    {  
+        $data = Event::simplePaginate(1);
+        return view('home',compact('data'));
     }
 
 }
